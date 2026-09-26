@@ -1,13 +1,20 @@
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: 62.5%;
 }
 
 body {
@@ -18,203 +25,124 @@ body {
 }
 
 
-/* =====================================================
+/* =========================================
    HEADER
-===================================================== */
+========================================= */
 
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
     padding: 20px 6%;
-
     background-color: #0c0c0c;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     z-index: 1000;
 }
 
-
-/* =====================================================
-   LOGO
-===================================================== */
-
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-
     color: white;
-    text-decoration: none;
-
-    white-space: nowrap;
+    font-size: 2.8rem;
+    font-weight: bold;
 }
 
 .logo span {
     color: orangered;
 }
 
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
+#menu-icon {
+    display: none;
+    font-size: 3.2rem;
+    color: white;
+    cursor: pointer;
+}
 
 .navbar {
     display: flex;
-    align-items: center;
-    gap: 30px;
+    gap: 3rem;
 }
 
 .navbar a {
     color: white;
-    text-decoration: none;
-
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
-
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.navbar a:hover {
     color: orangered;
 }
 
 
-/* =====================================================
-   HAMBURGER MENU
-===================================================== */
-
-#menu-icon {
-    display: none;
-
-    font-size: 32px;
-    color: white;
-
-    cursor: pointer;
-}
-
-
-/* =====================================================
+/* =========================================
    GENERAL SECTION
-===================================================== */
+========================================= */
 
 section {
     min-height: 100vh;
-    padding: 120px 6% 80px;
+    padding: 10rem 6% 6rem;
 }
 
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+}
 
-/* =====================================================
-   ORANGE TEXT
-===================================================== */
-
-.home-content span,
-.about-content span,
 .heading span {
     color: orangered;
 }
 
 
-/* =====================================================
-   HOME SECTION
-===================================================== */
+/* =========================================
+   HOME
+========================================= */
 
 .home {
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 5rem;
-
     min-height: 100vh;
-
     background-color: rgb(245, 241, 241);
 }
 
-
-/* =====================================================
-   HOME CONTENT
-===================================================== */
-
 .home-content {
     flex: 1;
-
     max-width: 600px;
     min-width: 0;
 
     display: flex;
     flex-direction: column;
-
     align-items: flex-end;
     text-align: right;
 }
 
 .home-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-
+    font-size: 5.5rem;
     line-height: 1.2;
+}
 
-    margin-bottom: 15px;
+.home-content h1 span {
+    color: orangered;
 }
 
 .home-content h3 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 1rem 0;
 }
 
+.home-content h3 span {
+    color: orangered;
+}
+
 .home-content p {
-    font-size: 1rem;
-    font-weight: 500;
-
-    line-height: 1.7;
-
-    margin-bottom: 25px;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin: 1.5rem 0 2.5rem;
 }
-
-
-/* =====================================================
-   HOME BUTTON
-===================================================== */
-
-.btn {
-    display: inline-block;
-
-    padding: 12px 25px;
-
-    background-color: orangered;
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    transition: 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #111;
-
-    box-shadow:
-        0 0 15px orangered;
-
-    transform: translateY(-3px);
-}
-
-
-/* =====================================================
-   HOME IMAGE
-   IMPORTANT:
-   HTML uses .home-img
-===================================================== */
 
 .home-img {
     flex: 1;
@@ -229,17 +157,14 @@ section {
 .home-img img {
     width: 400px;
     height: 400px;
-
     max-width: 100%;
 
     object-fit: cover;
 
     border-radius: 50%;
-
     border: 4px solid orangered;
 
-    box-shadow:
-        0 0 25px orangered;
+    box-shadow: 0 0 25px orangered;
 
     transition:
         transform 0.4s ease-in-out,
@@ -247,247 +172,20 @@ section {
 }
 
 .home-img img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 
     box-shadow:
         0 0 25px orangered,
-        0 0 50px orangered,
-        0 0 100px orangered;
+        0 0 50px rgba(255, 69, 0, 0.5);
 }
 
 
-/* =====================================================
-   ABOUT SECTION
-===================================================== */
+/* =========================================
+   BUTTON
+========================================= */
 
-.about {
-    min-height: 100vh;
-
-    padding: 150px 6% 80px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 5rem;
-
-    background-color: rgb(245, 241, 241);
-}
-
-
-/* =====================================================
-   ABOUT IMAGE
-===================================================== */
-
-.about-image {
-    flex: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-image img {
-    width: 400px;
-    height: 400px;
-
-    max-width: 100%;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 4px solid orangered;
-
-    box-shadow:
-        0 0 25px orangered;
-
-    transition: 0.4s ease-in-out;
-}
-
-.about-image img:hover {
-    transform: scale(1.03);
-
-    box-shadow:
-        0 0 25px orangered,
-        0 0 50px orangered,
-        0 0 100px orangered;
-}
-
-
-/* =====================================================
-   ABOUT CONTENT
-===================================================== */
-
-.about-content {
-    flex: 1;
-
-    max-width: 600px;
-}
-
-.about-content h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-
-    margin-bottom: 15px;
-}
-
-.about-content h3 {
-    font-size: 2rem;
-
-    margin-bottom: 20px;
-}
-
-.about-content p {
-    font-size: 17px;
-
-    line-height: 1.7;
-
-    margin-bottom: 15px;
-}
-
-
-/* =====================================================
-   ABOUT BUTTON
-===================================================== */
-
-.about-btn {
+.btn {
     display: inline-block;
-
-    margin-top: 15px;
-
-    padding: 12px 25px;
-
-    background-color: #111;
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    transition: 0.3s ease;
-}
-
-.about-btn:hover {
-    background-color: orangered;
-
-    box-shadow:
-        0 5px 15px rgba(255, 69, 0, 0.4);
-
-    transform: translateY(-3px);
-}
-
-
-/* =====================================================
-   GENERAL HEADING
-===================================================== */
-
-.heading {
-    font-size: 3.5rem;
-
-    margin-bottom: 50px;
-
-    text-align: center;
-
-    line-height: 1.2;
-}
-
-.heading span {
-    color: orangered;
-}
-
-
-/* =====================================================
-   SERVICES
-===================================================== */
-
-.services {
-    min-height: 100vh;
-
-    padding: 150px 6% 80px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    background-color: white;
-}
-
-.services-container {
-    width: 100%;
-    max-width: 1200px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 2.5rem;
-}
-
-
-/* =====================================================
-   SERVICE BOX
-===================================================== */
-
-.service-box {
-    padding: 4rem 3rem;
-
-    background: #111;
-
-    border: 1px solid #111;
-
-    border-radius: 1.5rem;
-
-    text-align: center;
-
-    transition: 0.3s ease;
-}
-
-.service-box:hover {
-    transform: translateY(-8px);
-
-    border-color: orangered;
-
-    box-shadow:
-        0 0 20px rgba(255, 69, 0, 0.3);
-}
-
-.service-box i {
-    font-size: 5rem;
-    color: orangered;
-}
-
-.service-box h3 {
-    font-size: 2.4rem;
-
-    margin: 1.5rem 0;
-
-    color: orangered;
-}
-
-.service-box p {
-    font-size: 1.6rem;
-
-    line-height: 1.7;
-
-    color: white;
-}
-
-
-/* =====================================================
-   SERVICE BUTTON
-===================================================== */
-
-.service-btn {
-    display: inline-block;
-
-    margin-top: 1.5rem;
 
     padding: 1.2rem 2.5rem;
 
@@ -499,12 +197,10 @@ section {
     font-size: 1.6rem;
     font-weight: bold;
 
-    text-decoration: none;
-
     transition: 0.3s;
 }
 
-.service-btn:hover {
+.btn:hover {
     transform: translateY(-3px);
 
     box-shadow:
@@ -513,42 +209,112 @@ section {
 }
 
 
-/* =====================================================
-   PROJECTS PAGE
-===================================================== */
+/* =========================================
+   ABOUT
+========================================= */
 
-.projects {
-    min-height: 100vh;
-
-    padding: 150px 6% 80px;
+.about {
+    background-color: white;
+    color: #111;
 
     display: flex;
-    flex-direction: column;
-
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
 
+.about-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.about-content h2 span {
+    color: orangered;
+}
+
+.about-content p {
+    font-size: 1.7rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services {
+    background-color: rgb(245, 241, 241);
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-box {
+    flex: 1 1 300px;
+    max-width: 400px;
+
+    background: white;
+
+    padding: 3rem 2rem;
+
+    text-align: center;
+
+    border-radius: 1.5rem;
+    border: 1px solid #ddd;
+
+    transition: 0.3s;
+}
+
+.services-box:hover {
+    transform: translateY(-8px);
+
+    border-color: orangered;
+
+    box-shadow:
+        0 0 20px rgba(255, 69, 0, 0.3);
+}
+
+.services-box i {
+    font-size: 5rem;
+    color: orangered;
+
+    margin-bottom: 1.5rem;
+}
+
+.services-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.services-box p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.projects {
     background-color: white;
 }
 
-
-/* =====================================================
-   PROJECT GALLERY CONTAINER
-===================================================== */
-
 .projects-container {
-    width: 100%;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
 }
-
-
-/* =====================================================
-   PROJECT BOX
-===================================================== */
 
 .project-box {
     width: 750px;
@@ -559,7 +325,6 @@ section {
     background: #f7f7f7;
 
     border: 1px solid #ddd;
-
     border-radius: 1.5rem;
 
     transition: 0.3s;
@@ -575,9 +340,9 @@ section {
 }
 
 
-/* =====================================================
-   MAIN PROJECT IMAGE
-===================================================== */
+/* =========================================
+   PROJECT MAIN IMAGE
+========================================= */
 
 .project-main-image {
     position: relative;
@@ -588,7 +353,6 @@ section {
     background: #111;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
@@ -623,17 +387,15 @@ section {
     transition: opacity 0.3s ease;
 }
 
-.project-box:hover
-.project-main-image
-img#mainProjectImage {
+.project-box:hover .project-main-image img#mainProjectImage {
     transform: none;
     filter: none;
 }
 
 
-/* =====================================================
+/* =========================================
    GALLERY BUTTONS
-===================================================== */
+========================================= */
 
 .gallery-btn {
     position: absolute;
@@ -645,8 +407,6 @@ img#mainProjectImage {
     width: 45px;
     height: 45px;
 
-    border: none;
-
     border-radius: 50%;
 
     background: rgba(0, 0, 0, 0.8);
@@ -656,7 +416,6 @@ img#mainProjectImage {
     font-size: 2.8rem;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
@@ -683,9 +442,9 @@ img#mainProjectImage {
 }
 
 
-/* =====================================================
+/* =========================================
    PROJECT THUMBNAILS
-===================================================== */
+========================================= */
 
 .project-thumbnails {
     display: flex;
@@ -737,8 +496,7 @@ img#mainProjectImage {
     filter: none;
 }
 
-.project-thumbnails
-.thumbnail.active-thumb {
+.project-thumbnails .thumbnail.active-thumb {
     opacity: 1;
 
     visibility: visible;
@@ -750,9 +508,9 @@ img#mainProjectImage {
 }
 
 
-/* =====================================================
+/* =========================================
    PROJECT CONTENT
-===================================================== */
+========================================= */
 
 .project-content {
     padding: 3rem;
@@ -780,11 +538,6 @@ img#mainProjectImage {
     margin: 0 auto;
 }
 
-
-/* =====================================================
-   PROJECT BUTTON
-===================================================== */
-
 .project-btn {
     display: inline-block;
 
@@ -793,14 +546,14 @@ img#mainProjectImage {
     padding: 1.2rem 2.5rem;
 
     background: orangered;
+
     color: white;
 
     border-radius: 0.7rem;
 
     font-size: 1.6rem;
-    font-weight: bold;
 
-    text-decoration: none;
+    font-weight: bold;
 
     transition: 0.3s;
 }
@@ -814,103 +567,40 @@ img#mainProjectImage {
 }
 
 
-/* =====================================================
+/* =========================================
    CONTACT
-===================================================== */
+========================================= */
 
 .contact {
     min-height: 100vh;
 
-    padding: 150px 8% 80px;
+    padding: 150px 10% 100px;
 
-    display: flex;
+    background-color: white;
 
-    align-items: center;
-    justify-content: center;
-
-    gap: 6rem;
-
-    background: white;
+    color: black;
 }
 
-.contact-content,
-.contact-form {
-    flex: 1;
+.contact .heading {
+    text-align: center;
 
-    max-width: 600px;
-}
-
-.contact-content h2 {
     font-size: 4rem;
 
-    margin-bottom: 2rem;
-
-    color: #111;
+    margin-bottom: 5rem;
 }
 
-.contact-content h2 span {
-    color: orangered;
-}
-
-.contact-content > p {
-    font-size: 1.7rem;
-
-    line-height: 1.7;
-
-    color: #333;
-}
-
-
-/* =====================================================
-   CONTACT INFORMATION
-===================================================== */
-
-.contact-info {
-    margin-top: 3rem;
-
+.contact-container {
     display: flex;
 
-    flex-direction: column;
-
-    gap: 2rem;
-}
-
-.contact-item {
-    display: flex;
-
+    justify-content: center;
     align-items: center;
-
-    gap: 1.5rem;
 }
-
-.contact-item i {
-    font-size: 3rem;
-
-    color: orangered;
-}
-
-.contact-item h4 {
-    font-size: 1.8rem;
-
-    color: #111;
-}
-
-.contact-item p {
-    font-size: 1.5rem;
-
-    color: #555;
-
-    margin-top: 0.4rem;
-}
-
-
-/* =====================================================
-   CONTACT FORM
-===================================================== */
 
 .contact-form {
-    display: flex;
+    width: 100%;
+    max-width: 700px;
 
+    display: flex;
     flex-direction: column;
 
     gap: 1.5rem;
@@ -922,26 +612,17 @@ img#mainProjectImage {
 
     padding: 1.5rem;
 
-    background: #f7f7f7;
+    background: #f5f5f5;
 
-    color: #111;
-
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
 
     border-radius: 0.7rem;
 
+    color: #111;
+
     font-size: 1.6rem;
 
-    font-family: Arial, sans-serif;
-
-    outline: none;
-
     transition: 0.3s;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #777;
 }
 
 .contact-form input:focus,
@@ -953,25 +634,23 @@ img#mainProjectImage {
 }
 
 .contact-form textarea {
-    min-height: 180px;
+    min-height: 200px;
 
     resize: vertical;
 }
 
 .contact-form button {
-    width: fit-content;
+    align-self: center;
 
-    padding: 1.5rem 2.5rem;
-
-    border: none;
-
-    border-radius: 0.7rem;
+    padding: 1.2rem 3rem;
 
     background: orangered;
 
     color: white;
 
-    font-size: 1.7rem;
+    border-radius: 0.7rem;
+
+    font-size: 1.6rem;
 
     font-weight: bold;
 
@@ -981,24 +660,21 @@ img#mainProjectImage {
 }
 
 .contact-form button:hover {
-    box-shadow:
-        0 0 15px orangered,
-        0 0 25px rgba(255, 69, 0, 0.4);
+    transform: translateY(-3px);
 
-    transform: translateY(-2px);
+    box-shadow:
+        0 0 15px orangered;
 }
 
 
-/* =====================================================
+/* =========================================
    FOOTER
-===================================================== */
+========================================= */
 
 .footer {
-    position: relative;
-
     width: 100%;
 
-    padding: 3rem 10%;
+    padding: 1.2rem 6%;
 
     background: #111;
 
@@ -1008,18 +684,17 @@ img#mainProjectImage {
 }
 
 .footer p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 
     color: #bbb;
 
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
 
-/* =====================================================
+/* =========================================
    SOCIAL ICONS
-   GitHub + Instagram + LinkedIn
-===================================================== */
+========================================= */
 
 .social-icons {
     display: flex;
@@ -1027,14 +702,14 @@ img#mainProjectImage {
     justify-content: center;
     align-items: center;
 
-    gap: 1.5rem;
+    gap: 1.2rem;
 
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 .social-icons a {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
 
     display: flex;
 
@@ -1047,7 +722,7 @@ img#mainProjectImage {
 
     color: orangered;
 
-    font-size: 2.2rem;
+    font-size: 2rem;
 
     text-decoration: none;
 
@@ -1062,134 +737,25 @@ img#mainProjectImage {
     box-shadow:
         0 0 15px orangered;
 
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 
-/* =====================================================
-   FOOTER UP BUTTON
-===================================================== */
-
-.footer-icon {
-    position: absolute;
-
-    right: 5%;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    color: white;
-
-    font-size: 2.8rem;
-
-    transition: 0.3s;
-}
-
-.footer-icon:hover {
-    color: orangered;
-
-    transform:
-        translateY(-50%)
-        scale(1.1);
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media screen and (max-width: 900px) {
-
-    .header {
-        padding: 18px 5%;
-    }
-
-
-    /* HOME */
-
-    .home {
-        gap: 3rem;
-    }
-
-    .home-content h1 {
-        font-size: 3rem;
-    }
-
-    .home-content h3 {
-        font-size: 1.7rem;
-    }
-
-    .home-img img {
-        width: 320px;
-        height: 320px;
-    }
-
-
-    /* ABOUT */
-
-    .about {
-        gap: 3rem;
-    }
-
-    .about-image img {
-        width: 320px;
-        height: 320px;
-    }
-
-    .about-content h1 {
-        font-size: 3rem;
-    }
-
-    .about-content h3 {
-        font-size: 1.7rem;
-    }
-
-
-    /* SERVICES */
-
-    .services-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================================
+   MOBILE MENU
+========================================= */
 
 @media screen and (max-width: 768px) {
-
-    body {
-        overflow-x: hidden;
-    }
-
 
     /* HEADER */
 
     .header {
-        padding: 15px 5%;
+        padding: 18px 6%;
     }
-
-    .logo {
-        font-size: 2.3rem;
-    }
-
-
-    /* MENU ICON */
 
     #menu-icon {
-        display: block !important;
-
-        font-size: 3.2rem;
-
-        color: white;
-
-        cursor: pointer;
+        display: block;
     }
-
-
-    /* MOBILE NAVIGATION */
 
     .navbar {
         position: absolute;
@@ -1201,7 +767,7 @@ img#mainProjectImage {
 
         background: #111;
 
-        display: none !important;
+        display: none;
 
         flex-direction: column;
 
@@ -1209,29 +775,21 @@ img#mainProjectImage {
 
         gap: 0;
 
-        padding: 1.5rem 0;
+        padding: 1rem 0;
     }
 
     .navbar.active {
-        display: flex !important;
+        display: flex;
     }
 
     .navbar a {
         width: 100%;
 
-        padding: 1.2rem 0;
-
         text-align: center;
 
-        font-size: 1.6rem;
-    }
+        padding: 1.5rem;
 
-
-    /* SECTIONS */
-
-    section {
-        padding-left: 5%;
-        padding-right: 5%;
+        font-size: 1.8rem;
     }
 
 
@@ -1261,19 +819,15 @@ img#mainProjectImage {
     }
 
     .home-content h1 {
-        font-size: 3.5rem;
-
-        word-wrap: break-word;
+        font-size: 4rem;
     }
 
     .home-content h3 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .home-content p {
-        font-size: 1.5rem;
-
-        line-height: 1.7;
+        font-size: 1.6rem;
     }
 
     .home-img {
@@ -1286,91 +840,18 @@ img#mainProjectImage {
     }
 
 
-    /* ABOUT */
+    /* GENERAL */
 
-    .about {
-        min-height: auto;
-
-        flex-direction: column;
-
-        gap: 2rem;
-
-        padding-top: 13rem;
-        padding-bottom: 6rem;
-
-        text-align: center;
-    }
-
-    .about-content {
-        width: 100%;
-
-        max-width: 600px;
-    }
-
-    .about-content h1 {
-        font-size: 3.5rem;
-    }
-
-    .about-content h3 {
-        font-size: 2.2rem;
-    }
-
-    .about-content p {
-        font-size: 1.5rem;
-
-        line-height: 1.7;
-    }
-
-    .about-image {
-        width: 100%;
-    }
-
-    .about-image img {
-        width: 280px;
-        height: 280px;
-    }
-
-
-    /* SERVICES */
-
-    .services {
-        min-height: auto;
-
-        padding-top: 13rem;
-        padding-bottom: 6rem;
+    section {
+        padding: 10rem 6% 5rem;
     }
 
     .heading {
         font-size: 3.5rem;
-
-        margin-bottom: 3.5rem;
-    }
-
-    .services-container {
-        grid-template-columns: 1fr !important;
-
-        gap: 2.5rem;
-    }
-
-    .service-box {
-        width: 100%;
-
-        padding: 3.5rem 2.5rem;
     }
 
 
     /* PROJECTS */
-
-    .projects {
-        min-height: auto;
-
-        padding-top: 13rem;
-        padding-bottom: 6rem;
-    }
-
-    .projects-container {
-        width: 100%;
-    }
 
     .project-box {
         width: 100%;
@@ -1395,129 +876,45 @@ img#mainProjectImage {
     /* CONTACT */
 
     .contact {
-        min-height: auto;
-
-        flex-direction: column;
-
-        gap: 4rem;
-
-        padding-top: 13rem;
-        padding-bottom: 6rem;
-
-        text-align: center;
-    }
-
-    .contact-content,
-    .contact-form {
-        width: 100%;
-
-        max-width: 600px;
-    }
-
-    .contact-content h2 {
-        font-size: 3.5rem;
-    }
-
-    .contact-content > p {
-        font-size: 1.5rem;
-    }
-
-    .contact-info {
-        align-items: center;
-
-        text-align: left;
-    }
-
-    .contact-item {
-        width: 250px;
-    }
-
-    .contact-form button {
-        width: 100%;
-    }
-
-
-    /* FOOTER */
-
-    .footer {
-        padding: 2.5rem 5% 3rem;
-    }
-
-    .social-icons {
-        flex-wrap: wrap;
-    }
-
-    .footer-icon {
-        position: static;
-
-        display: inline-block;
-
-        margin-top: 1.5rem;
-
-        transform: none;
-    }
-
-    .footer-icon:hover {
-        transform: translateY(-3px);
-    }
-
-
-    /* PROJECT GALLERY BUTTONS */
-
-    .gallery-btn {
-        width: 42px;
-        height: 42px;
-
-        font-size: 2.5rem;
+        padding: 130px 6% 70px;
     }
 }
 
 
-/* =====================================================
-   SMALL PHONES
-===================================================== */
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
 @media screen and (max-width: 480px) {
 
+    /* HEADER */
+
     .logo {
-        font-size: 2rem;
+        font-size: 2.4rem;
+    }
+
+    #menu-icon {
+        font-size: 3rem;
     }
 
 
     /* HOME */
 
-    .home-content h1,
-    .about-content h1 {
-        font-size: 3rem;
+    .home-content h1 {
+        font-size: 3.5rem;
     }
 
-    .home-content h3,
-    .about-content h3 {
-        font-size: 2rem;
+    .home-content h3 {
+        font-size: 2.2rem;
     }
 
-    .home-img img,
-    .about-image img {
+    .home-img img {
         width: 230px;
         height: 230px;
     }
 
 
-    /* HEADING */
-
-    .heading {
-        font-size: 3rem;
-    }
-
-
-    /* SERVICES */
-
-    .service-box {
-        padding: 3rem 2rem;
-    }
-
-
-    /* PROJECT GALLERY */
+    /* PROJECT */
 
     .project-main-image {
         height: 250px;
@@ -1566,11 +963,24 @@ img#mainProjectImage {
     }
 
 
-    /* CONTACT */
+    /* FOOTER */
 
-    .contact-item {
-        width: 100%;
+    .footer {
+        padding: 1rem 5%;
+    }
 
-        max-width: 280px;
+    .footer p {
+        font-size: 1.3rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+
+        font-size: 1.8rem;
     }
 }
