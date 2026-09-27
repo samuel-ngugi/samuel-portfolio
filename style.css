@@ -1,6 +1,3 @@
-/* =========================================
-   RESET
-========================================= */
 
 * {
     margin: 0;
@@ -9,33 +6,39 @@
     text-decoration: none;
     border: none;
     outline: none;
+    scroll-behavior: smooth;
 }
 
 html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
-    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
     color: #111;
-    font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
+section {
+    min-height: 100vh;
+    padding: 10rem 6% 6rem;
+}
 
-/* =========================================
-   HEADER
-========================================= */
+span {
+    color: orangered;
+}
+
+
 
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 6%;
-    background-color: #0c0c0c;
+    padding: 2rem 6%;
+    background: #111;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,15 +55,9 @@ body {
     color: orangered;
 }
 
-#menu-icon {
-    display: none;
-    font-size: 3.2rem;
-    color: white;
-    cursor: pointer;
-}
-
 .navbar {
     display: flex;
+    align-items: center;
     gap: 3rem;
 }
 
@@ -68,22 +65,24 @@ body {
     color: white;
     font-size: 1.7rem;
     font-weight: 500;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .navbar a:hover {
     color: orangered;
 }
 
-
-/* =========================================
-   GENERAL SECTION
-========================================= */
-
-section {
-    min-height: 100vh;
-    padding: 10rem 6% 6rem;
+#menu-icon {
+    display: none;
+    color: white;
+    font-size: 3.2rem;
+    cursor: pointer;
 }
+
+
+/* =========================================================
+   GENERAL HEADINGS
+   ========================================================= */
 
 .heading {
     text-align: center;
@@ -91,163 +90,191 @@ section {
     margin-bottom: 5rem;
 }
 
-.heading span {
-    color: orangered;
-}
 
-
-/* =========================================
-   HOME
-========================================= */
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
 
 .home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
     min-height: 100vh;
-    background-color: rgb(245, 241, 241);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    background: white;
 }
 
 .home-content {
     flex: 1;
-    max-width: 600px;
-    min-width: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    max-width: 650px;
 }
 
 .home-content h1 {
     font-size: 5.5rem;
     line-height: 1.2;
-}
-
-.home-content h1 span {
-    color: orangered;
+    margin-bottom: 1rem;
 }
 
 .home-content h3 {
     font-size: 3rem;
-    margin: 1rem 0;
-}
-
-.home-content h3 span {
-    color: orangered;
+    margin-bottom: 2rem;
 }
 
 .home-content p {
     font-size: 1.7rem;
     line-height: 1.8;
-    margin: 1.5rem 0 2.5rem;
+    margin-bottom: 3rem;
+    color: #444;
 }
 
 .home-img {
     flex: 1;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    min-width: 0;
 }
 
 .home-img img {
-    width: 400px;
-    height: 400px;
+    width: 420px;
+    height: 420px;
     max-width: 100%;
-
     object-fit: cover;
-
     border-radius: 50%;
     border: 4px solid orangered;
-
     box-shadow: 0 0 25px orangered;
-
-    transition:
-        transform 0.4s ease-in-out,
-        box-shadow 0.4s ease-in-out;
+    transition: 0.4s ease;
 }
 
 .home-img img:hover {
-    transform: scale(1.05);
-
+    transform: scale(1.03);
     box-shadow:
         0 0 25px orangered,
-        0 0 50px rgba(255, 69, 0, 0.5);
+        0 0 50px rgba(255, 69, 0, 0.4);
 }
-
-
-/* =========================================
-   BUTTON
-========================================= */
 
 .btn {
     display: inline-block;
-
     padding: 1.2rem 2.5rem;
-
     background: orangered;
     color: white;
-
     border-radius: 0.7rem;
-
     font-size: 1.6rem;
     font-weight: bold;
-
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-
     box-shadow:
         0 0 15px orangered,
         0 0 25px rgba(255, 69, 0, 0.4);
 }
 
 
-/* =========================================
-   ABOUT
-========================================= */
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
 
 .about {
-    background-color: white;
-    color: #111;
+    min-height: 100vh;
+    padding: 12rem 6% 6rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    gap: 6rem;
+
+    background: white;
+    color: #111;
+}
+
+.about-image {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.about-image img {
+    width: min(450px, 100%);
+    height: 450px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 4px solid orangered;
+    box-shadow: 0 0 25px orangered;
+
+    display: block;
+    transition: 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 0 25px orangered,
+        0 0 50px rgba(255, 69, 0, 0.4);
 }
 
 .about-content {
-    max-width: 900px;
-    text-align: center;
+    flex: 1 1 0;
+    max-width: 600px;
+    min-width: 0;
+    text-align: left;
 }
 
-.about-content h2 {
-    font-size: 4rem;
+.about-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-content h3 {
+    font-size: 2.8rem;
     margin-bottom: 2rem;
-}
-
-.about-content h2 span {
-    color: orangered;
 }
 
 .about-content p {
     font-size: 1.7rem;
     line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1.2rem 2.5rem;
+
+    background: orangered;
+    color: white;
+
+    border-radius: 0.7rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 15px orangered,
+        0 0 25px rgba(255, 69, 0, 0.4);
 }
 
 
-/* =========================================
-   SERVICES
-========================================= */
+/* =========================================================
+   SERVICES PAGE
+   ========================================================= */
 
 .services {
-    background-color: rgb(245, 241, 241);
+    background: white;
+    color: #111;
+}
+
+.services h2 {
+    margin-bottom: 5rem;
 }
 
 .services-container {
@@ -255,38 +282,32 @@ section {
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .services-box {
-    flex: 1 1 300px;
-    max-width: 400px;
+    flex: 1 1 30rem;
+    max-width: 38rem;
+    padding: 3rem 2.5rem;
 
-    background: white;
-
-    padding: 3rem 2rem;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 1.5rem;
 
     text-align: center;
 
-    border-radius: 1.5rem;
-    border: 1px solid #ddd;
-
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .services-box:hover {
     transform: translateY(-8px);
-
     border-color: orangered;
-
-    box-shadow:
-        0 0 20px rgba(255, 69, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
 }
 
 .services-box i {
     font-size: 5rem;
     color: orangered;
-
     margin-bottom: 1.5rem;
 }
 
@@ -302,12 +323,13 @@ section {
 }
 
 
-/* =========================================
-   PROJECTS
-========================================= */
+/* =========================================================
+   PROJECTS PAGE
+   ========================================================= */
 
 .projects {
-    background-color: white;
+    background: white;
+    color: #111;
 }
 
 .projects-container {
@@ -323,26 +345,20 @@ section {
     overflow: hidden;
 
     background: #f7f7f7;
-
     border: 1px solid #ddd;
     border-radius: 1.5rem;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .project-box:hover {
     transform: translateY(-8px);
-
     border-color: orangered;
-
-    box-shadow:
-        0 0 20px rgba(255, 69, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
 }
 
 
-/* =========================================
-   PROJECT MAIN IMAGE
-========================================= */
+/* Main project image */
 
 .project-main-image {
     position: relative;
@@ -393,13 +409,10 @@ section {
 }
 
 
-/* =========================================
-   GALLERY BUTTONS
-========================================= */
+/* Gallery buttons */
 
 .gallery-btn {
     position: absolute;
-
     top: 50%;
 
     transform: translateY(-50%);
@@ -410,7 +423,6 @@ section {
     border-radius: 50%;
 
     background: rgba(0, 0, 0, 0.8);
-
     color: white;
 
     font-size: 2.8rem;
@@ -423,14 +435,12 @@ section {
 
     z-index: 10;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .gallery-btn:hover {
     background: orangered;
-
-    box-shadow:
-        0 0 15px orangered;
+    box-shadow: 0 0 15px orangered;
 }
 
 .prev-btn {
@@ -442,13 +452,10 @@ section {
 }
 
 
-/* =========================================
-   PROJECT THUMBNAILS
-========================================= */
+/* Project thumbnails */
 
 .project-thumbnails {
     display: flex;
-
     justify-content: center;
     align-items: center;
 
@@ -464,7 +471,6 @@ section {
 .project-thumbnails .thumbnail {
     width: 90px;
     height: 60px;
-
     min-width: 90px;
 
     object-fit: cover;
@@ -477,64 +483,50 @@ section {
     filter: none;
     transform: none;
 
-    background: #fff;
+    background: white;
 
     border: 2px solid transparent;
-
     border-radius: 0.5rem;
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .project-thumbnails .thumbnail:hover {
     opacity: 1;
-
     transform: scale(1.05);
-
     filter: none;
 }
 
 .project-thumbnails .thumbnail.active-thumb {
     opacity: 1;
-
     visibility: visible;
 
     border-color: orangered;
-
-    box-shadow:
-        0 0 10px orangered;
+    box-shadow: 0 0 10px orangered;
 }
 
 
-/* =========================================
-   PROJECT CONTENT
-========================================= */
+/* Project text */
 
 .project-content {
     padding: 3rem;
-
     text-align: center;
 }
 
 .project-content h3 {
     font-size: 2.5rem;
-
     margin-bottom: 1.2rem;
-
     color: #111;
 }
 
 .project-content p {
     font-size: 1.6rem;
-
     line-height: 1.8;
-
     color: #444;
 
     max-width: 650px;
-
     margin: 0 auto;
 }
 
@@ -542,20 +534,17 @@ section {
     display: inline-block;
 
     margin-top: 2rem;
-
     padding: 1.2rem 2.5rem;
 
     background: orangered;
-
     color: white;
 
     border-radius: 0.7rem;
 
     font-size: 1.6rem;
-
     font-weight: bold;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .project-btn:hover {
@@ -567,42 +556,96 @@ section {
 }
 
 
-/* =========================================
-   CONTACT
-========================================= */
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
 
 .contact {
     min-height: 100vh;
+    padding: 12rem 6% 8rem;
 
-    padding: 150px 10% 100px;
-
-    background-color: white;
-
-    color: black;
-}
-
-.contact .heading {
-    text-align: center;
-
-    font-size: 4rem;
-
-    margin-bottom: 5rem;
-}
-
-.contact-container {
     display: flex;
-
     justify-content: center;
     align-items: center;
+
+    gap: 6rem;
+
+    background: white;
+    color: #111;
 }
 
+.contact-content {
+    flex: 1 1 0;
+    max-width: 550px;
+    min-width: 0;
+}
+
+.contact-content h2 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-content > p {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 3rem;
+}
+
+
+/* Contact information */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-item > i {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: orangered;
+    color: white;
+
+    font-size: 2.5rem;
+}
+
+.contact-item h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+
+/* Contact form */
+
 .contact-form {
+    flex: 1 1 0;
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
+    min-width: 0;
 
     display: flex;
     flex-direction: column;
-
     gap: 1.5rem;
 }
 
@@ -612,98 +655,89 @@ section {
 
     padding: 1.5rem;
 
-    background: #f5f5f5;
-
-    border: 2px solid #ddd;
-
-    border-radius: 0.7rem;
-
+    background: #f7f7f7;
     color: #111;
+
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
 
     font-size: 1.6rem;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: orangered;
-
-    box-shadow:
-        0 0 10px rgba(255, 69, 0, 0.2);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.2);
 }
 
 .contact-form textarea {
-    min-height: 200px;
-
+    min-height: 180px;
     resize: vertical;
 }
 
 .contact-form button {
-    align-self: center;
-
-    padding: 1.2rem 3rem;
+    padding: 1.4rem 2.5rem;
 
     background: orangered;
-
     color: white;
 
     border-radius: 0.7rem;
 
     font-size: 1.6rem;
-
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .contact-form button:hover {
     transform: translateY(-3px);
 
     box-shadow:
-        0 0 15px orangered;
+        0 0 15px orangered,
+        0 0 25px rgba(255, 69, 0, 0.4);
 }
 
 
-/* =========================================
+/* =========================================================
    FOOTER
-========================================= */
+   ========================================================= */
 
 .footer {
-    width: 100%;
+    min-height: auto;
 
-    padding: 1.2rem 6%;
+    padding: 2.5rem 6%;
 
     background: #111;
-
     color: white;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+
     text-align: center;
+
+    position: relative;
 }
 
 .footer p {
     font-size: 1.4rem;
-
-    color: #bbb;
-
-    margin-bottom: 0.8rem;
 }
 
 
-/* =========================================
-   SOCIAL ICONS
-========================================= */
+/* Social icons */
 
 .social-icons {
     display: flex;
-
     justify-content: center;
     align-items: center;
 
     gap: 1.2rem;
-
     margin-top: 0.5rem;
 }
 
@@ -712,12 +746,10 @@ section {
     height: 38px;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
     border: 2px solid orangered;
-
     border-radius: 50%;
 
     color: orangered;
@@ -726,31 +758,61 @@ section {
 
     text-decoration: none;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .social-icons a:hover {
     background: orangered;
-
     color: #111;
 
-    box-shadow:
-        0 0 15px orangered;
+    box-shadow: 0 0 15px orangered;
 
     transform: translateY(-3px);
 }
 
 
-/* =========================================
-   MOBILE MENU
-========================================= */
+/* Contact footer arrow */
 
-@media screen and (max-width: 768px) {
+.footer-icon {
+    width: 38px;
+    height: 38px;
 
-    /* HEADER */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid orangered;
+    border-radius: 50%;
+
+    color: orangered;
+
+    font-size: 2rem;
+
+    transition: 0.3s ease;
+}
+
+.footer-icon:hover {
+    background: orangered;
+    color: #111;
+
+    box-shadow: 0 0 15px orangered;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    html {
+        font-size: 58%;
+    }
 
     .header {
-        padding: 18px 6%;
+        padding: 2rem 5%;
     }
 
     #menu-icon {
@@ -765,15 +827,12 @@ section {
 
         width: 100%;
 
-        background: #111;
-
         display: none;
-
         flex-direction: column;
 
-        align-items: center;
-
         gap: 0;
+
+        background: #111;
 
         padding: 1rem 0;
     }
@@ -785,73 +844,90 @@ section {
     .navbar a {
         width: 100%;
 
+        padding: 1.5rem 5%;
+
         text-align: center;
+    }
 
-        padding: 1.5rem;
-
-        font-size: 1.8rem;
+    section {
+        padding: 10rem 5% 6rem;
     }
 
 
-    /* HOME */
+    /* Home */
 
     .home {
-        min-height: auto;
-
         flex-direction: column-reverse;
 
-        gap: 2rem;
-
-        padding-top: 13rem;
-        padding-bottom: 6rem;
-
+        justify-content: center;
         text-align: center;
+
+        gap: 4rem;
     }
 
     .home-content {
+        max-width: 700px;
+    }
+
+    .home-content h1 {
+        font-size: 4.8rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.7rem;
+    }
+
+    .home-img img {
+        width: 350px;
+        height: 350px;
+    }
+
+
+    /* About */
+
+    .about {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 4rem;
+
+        padding-top: 12rem;
+    }
+
+    .about-image {
         width: 100%;
+    }
 
-        max-width: 600px;
+    .about-image img {
+        width: 350px;
+        height: 350px;
+    }
 
-        align-items: center;
+    .about-content {
+        width: 100%;
+        max-width: 700px;
 
         text-align: center;
     }
 
-    .home-content h1 {
+    .about-content h1 {
         font-size: 4rem;
     }
 
-    .home-content h3 {
-        font-size: 2.5rem;
+
+    /* Services */
+
+    .services-container {
+        gap: 2rem;
     }
 
-    .home-content p {
-        font-size: 1.6rem;
-    }
-
-    .home-img {
-        width: 100%;
-    }
-
-    .home-img img {
-        width: 280px;
-        height: 280px;
+    .services-box {
+        flex: 1 1 40rem;
     }
 
 
-    /* GENERAL */
-
-    section {
-        padding: 10rem 6% 5rem;
-    }
-
-    .heading {
-        font-size: 3.5rem;
-    }
-
-
-    /* PROJECTS */
+    /* Projects */
 
     .project-box {
         width: 100%;
@@ -864,30 +940,62 @@ section {
     .project-thumbnails .thumbnail {
         width: 75px;
         height: 55px;
-
         min-width: 75px;
     }
 
-    .project-content {
-        padding: 2.5rem 2rem;
+
+    /* Contact */
+
+    .contact {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4rem;
+
+        padding-top: 12rem;
+    }
+
+    .contact-content {
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: left;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        max-width: 700px;
+        margin: 0 auto;
     }
 
 
-    /* CONTACT */
+    /* Footer */
 
-    .contact {
-        padding: 130px 6% 70px;
+    .footer {
+        flex-direction: column;
     }
 }
 
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
 
 @media screen and (max-width: 480px) {
 
-    /* HEADER */
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.8rem 5%;
+    }
 
     .logo {
         font-size: 2.4rem;
@@ -898,23 +1006,87 @@ section {
     }
 
 
-    /* HOME */
+    /* General */
+
+    section {
+        padding: 9rem 5% 5rem;
+    }
+
+    .heading {
+        font-size: 3.3rem;
+        margin-bottom: 3.5rem;
+    }
+
+
+    /* Home */
+
+    .home {
+        gap: 3rem;
+    }
 
     .home-content h1 {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
     }
 
     .home-content h3 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
     }
 
     .home-img img {
-        width: 230px;
-        height: 230px;
+        width: 270px;
+        height: 270px;
     }
 
 
-    /* PROJECT */
+    /* About */
+
+    .about {
+        gap: 3rem;
+        padding-top: 10rem;
+    }
+
+    .about-image img {
+        width: 270px;
+        height: 270px;
+    }
+
+    .about-content h1 {
+        font-size: 3.3rem;
+    }
+
+    .about-content h3 {
+        font-size: 2.3rem;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+    }
+
+
+    /* Services */
+
+    .services-box {
+        padding: 2.5rem 2rem;
+    }
+
+    .services-box i {
+        font-size: 4rem;
+    }
+
+    .services-box h3 {
+        font-size: 2.2rem;
+    }
+
+    .services-box p {
+        font-size: 1.5rem;
+    }
+
+
+    /* Projects */
 
     .project-main-image {
         height: 250px;
@@ -923,7 +1095,6 @@ section {
     .gallery-btn {
         width: 38px;
         height: 38px;
-
         font-size: 2.3rem;
     }
 
@@ -937,7 +1108,6 @@ section {
 
     .project-thumbnails {
         justify-content: flex-start;
-
         padding: 1rem;
     }
 
@@ -946,7 +1116,6 @@ section {
 
         width: 70px;
         height: 50px;
-
         min-width: 70px;
     }
 
@@ -963,404 +1132,11 @@ section {
     }
 
 
-    /* FOOTER */
-
-    .footer {
-        padding: 1rem 5%;
-    }
-
-    .footer p {
-        font-size: 1.3rem;
-    }
-
-    .social-icons {
-        gap: 1rem;
-    }
-
-    .social-icons a {
-        width: 35px;
-        height: 35px;
-
-        font-size: 1.8rem;
-    }
-}
-
-
-/* =========================================
-   ABOUT PAGE FIX
-========================================= */
-
-.about {
-    min-height: 100vh;
-    padding: 12rem 6% 6rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 6rem;
-
-    background: white;
-    color: #111;
-}
-
-.about-image {
-    flex: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    max-width: 600px;
-}
-
-.about-image img {
-    width: 450px;
-    height: 450px;
-
-    max-width: 100%;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 4px solid orangered;
-
-    box-shadow: 0 0 25px orangered;
-
-    display: block;
-
-    transition: 0.4s ease;
-}
-
-.about-image img:hover {
-    transform: scale(1.03);
-
-    box-shadow:
-        0 0 25px orangered,
-        0 0 50px rgba(255, 69, 0, 0.4);
-}
-
-.about-content {
-    flex: 1;
-
-    max-width: 600px;
-
-    text-align: left;
-}
-
-.about-content h1 {
-    font-size: 4.5rem;
-
-    margin-bottom: 1rem;
-}
-
-.about-content h1 span {
-    color: orangered;
-}
-
-.about-content h3 {
-    font-size: 2.5rem;
-
-    margin-bottom: 2rem;
-}
-
-.about-content h3 span {
-    color: orangered;
-}
-
-.about-content p {
-    font-size: 1.7rem;
-
-    line-height: 1.8;
-
-    margin-bottom: 1.5rem;
-
-    color: #444;
-}
-
-.about-btn {
-    display: inline-block;
-
-    margin-top: 1rem;
-
-    padding: 1.2rem 2.5rem;
-
-    background: orangered;
-
-    color: white;
-
-    border-radius: 0.7rem;
-
-    font-size: 1.6rem;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.about-btn:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 0 15px orangered,
-        0 0 25px rgba(255, 69, 0, 0.4);
-}
-
-
-/* =========================================
-   CONTACT PAGE FIX
-========================================= */
-
-.contact {
-    min-height: 100vh;
-
-    padding: 12rem 6% 6rem;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 6rem;
-
-    background: white;
-
-    color: #111;
-}
-
-.contact-content {
-    flex: 1;
-
-    max-width: 500px;
-
-    text-align: left;
-}
-
-.contact-content h2 {
-    font-size: 4rem;
-
-    margin-bottom: 1.5rem;
-}
-
-.contact-content h2 span {
-    color: orangered;
-}
-
-.contact-content > p {
-    font-size: 1.7rem;
-
-    line-height: 1.7;
-
-    margin-bottom: 3rem;
-
-    color: #444;
-}
-
-
-/* =========================================
-   CONTACT INFORMATION
-========================================= */
-
-.contact-info {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 2rem;
-}
-
-.contact-item {
-    display: flex;
-
-    align-items: center;
-
-    gap: 1.5rem;
-}
-
-.contact-item > i {
-    width: 45px;
-    height: 45px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    background: orangered;
-
-    color: white;
-
-    border-radius: 50%;
-
-    font-size: 2.2rem;
-
-    flex-shrink: 0;
-}
-
-.contact-item h4 {
-    font-size: 1.7rem;
-
-    margin-bottom: 0.3rem;
-}
-
-.contact-item p {
-    font-size: 1.5rem;
-
-    color: #555;
-}
-
-
-/* =========================================
-   CONTACT FORM
-========================================= */
-
-.contact-form {
-    flex: 1;
-
-    width: 100%;
-
-    max-width: 600px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 1.5rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-
-    padding: 1.5rem;
-
-    background: #f5f5f5;
-
-    border: 2px solid #ddd;
-
-    border-radius: 0.7rem;
-
-    color: #111;
-
-    font-size: 1.6rem;
-
-    font-family: Arial, sans-serif;
-
-    transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: orangered;
-
-    box-shadow:
-        0 0 10px rgba(255, 69, 0, 0.2);
-}
-
-.contact-form textarea {
-    min-height: 200px;
-
-    resize: vertical;
-}
-
-.contact-form button {
-    align-self: flex-start;
-
-    padding: 1.2rem 2.5rem;
-
-    background: orangered;
-
-    color: white;
-
-    border-radius: 0.7rem;
-
-    font-size: 1.6rem;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.contact-form button:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 0 15px orangered,
-        0 0 25px rgba(255, 69, 0, 0.4);
-}
-
-
-/* =========================================
-   ABOUT + CONTACT MOBILE
-========================================= */
-
-@media screen and (max-width: 768px) {
-
-    /* ABOUT */
-
-    .about {
-        flex-direction: column;
-
-        gap: 3rem;
-
-        padding-top: 12rem;
-
-        text-align: center;
-    }
-
-    .about-image {
-        width: 100%;
-
-        max-width: 500px;
-    }
-
-    .about-image img {
-        width: 300px;
-        height: 300px;
-    }
-
-    .about-content {
-        width: 100%;
-
-        max-width: 600px;
-
-        text-align: center;
-    }
-
-    .about-content h1 {
-        font-size: 3.5rem;
-    }
-
-    .about-content h3 {
-        font-size: 2.3rem;
-    }
-
-    .about-content p {
-        font-size: 1.6rem;
-    }
-
-
-    /* CONTACT */
+    /* Contact */
 
     .contact {
-        flex-direction: column;
-
-        gap: 4rem;
-
-        padding-top: 12rem;
-
-        align-items: center;
-    }
-
-    .contact-content {
-        width: 100%;
-
-        max-width: 600px;
-
-        text-align: center;
+        gap: 3rem;
+        padding-top: 10rem;
     }
 
     .contact-content h2 {
@@ -1368,71 +1144,17 @@ section {
     }
 
     .contact-content > p {
-        font-size: 1.6rem;
-    }
-
-    .contact-info {
-        align-items: flex-start;
-
-        width: 100%;
-
-        max-width: 400px;
-
-        margin: 0 auto;
-    }
-
-    .contact-item {
-        text-align: left;
-    }
-
-    .contact-form {
-        width: 100%;
-
-        max-width: 600px;
-    }
-
-    .contact-form button {
-        align-self: center;
-    }
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media screen and (max-width: 480px) {
-
-    .about {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .about-image img {
-        width: 240px;
-        height: 240px;
-    }
-
-    .about-content h1 {
-        font-size: 3rem;
-    }
-
-    .about-content h3 {
-        font-size: 2rem;
-    }
-
-    .about-content p {
         font-size: 1.5rem;
     }
 
-
-    .contact {
-        padding-left: 5%;
-        padding-right: 5%;
+    .contact-item > i {
+        width: 45px;
+        height: 45px;
+        font-size: 2.2rem;
     }
 
-    .contact-content h2 {
-        font-size: 3rem;
+    .contact-item h4 {
+        font-size: 1.7rem;
     }
 
     .contact-item p {
@@ -1442,5 +1164,28 @@ section {
     .contact-form input,
     .contact-form textarea {
         font-size: 1.5rem;
+        padding: 1.3rem;
+    }
+
+    .contact-form textarea {
+        min-height: 150px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 2rem 5%;
+    }
+
+    .footer p {
+        font-size: 1.3rem;
+    }
+
+    .social-icons a,
+    .footer-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.8rem;
     }
 }
